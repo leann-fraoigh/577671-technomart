@@ -6,35 +6,44 @@
 </head>
 <body>
   <header>
-    <p>Техномарт</p> 
-    <h1 class="main-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1> 
-    <!-- Search -->
-    <nav class="main-navigation">
-      <ul class="site-navigation">
-        <li class="site-navigation-item"><a href="index.html">Главная</a></li>
-        <li class="site-navigation-item"><a href="#">Компания</a></li>
-        <li class="site-navigation-item"><a href="#">Каталог</a></li>
-        <li class="site-navigation-item"><a href="#">Новости</a></li>
-        <li class="site-navigation-item"><a href="#">Спецпредложения</a></li>
-        <li class="site-navigation-item"><a href="#">Доставка</a></li>
-        <li class="site-navigation-item"><a href="#">Контакты</a></li>
+    <div class="header-top">
+      <p class="logo">Техномарт</p> 
+      <form action="https://echo.htmlacademy.ru" method="GET">
+        <label class="visually-hidden" for="search">Поик по сайту:</label>
+        <input id="search" type="search" placeholder="Поиск:" name="q">
+      </form>
+      <ul class="shop-navigation">
+        <li class="shop-navigation-item"><a class="bookmarks" href="#">Закладки</a></li>
+        <li class="shop-navigation-item"><a class="basket" href="#">Корзина: 10</a></li>
+        <li class="shop-navigation-item"><a class="order" href="#">Оформить заказ</a></li>
       </ul>
+    </div>
+    <div class="header-middle">
+      <h1 class="main-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1> 
+      <p class="header-contacts">
+        <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+      </p>
       <ul class="user-navigation">
         <li class="user-navigation-item"><a href="#">Равшан Джамшутович</a></li>
-        <li class="user-navigation-item"><a href="#">Выйти</a></li>
+        <li class="user-navigation-item"><button class="button" type="button">Выйти</button>
         <li class="user-navigation-item"><a href="#">Мои заказы</a></li>
         <li class="user-navigation-item"><a href="#">Личный кабинет</a></li>
       </ul>
-      <ul class="shop-navigation">
-        <li class="shop-navigation-item"><a class="bookmarks" href="#">Закладки</a></li>
-        <li class="shop-navigation-item"><a class="basket-full" href="#">Корзина: 10</a></li>
-        <li class="shop-navigation-item"><a class="order" href="#">Оформить заказ</a></li>
-      </ul>
-    </nav>
-    <p class="header-contacts">
-        <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-    </p>
+    </div>
+    <div class="header-bottom">
+      <nav class="main-site-navigation">
+        <ul class="site-navigation">
+          <li class="site-navigation-item"><a href="#">Главная</a></li>
+          <li class="site-navigation-item"><a href="#">Компания</a></li>
+          <li class="site-navigation-item"><a href="catalog.html">Каталог</a></li>
+          <li class="site-navigation-item"><a href="#">Новости</a></li>
+          <li class="site-navigation-item"><a href="#">Спецпредложения</a></li>
+          <li class="site-navigation-item"><a href="#">Доставка</a></li>
+          <li class="site-navigation-item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>  
+    </div> 
   </header>  
   <main>
     <ul class="breadcrumbs">
@@ -45,6 +54,12 @@
     </ul>
     <h2>Перфораторы</h2>
     <form class="filter" action="https://echo.htmlacademy.ru" method="GET">
+      <h3>Фильтр:</h3>
+      <fieldset class="filter-item filter-item-price">
+        <legend>Цена:</legend>
+        <p class="visually-hidden" >Минимальная цена:</p> <input class="input filter-input" type="text" name="price-min" placeholder="0">
+        <p class="visually-hidden" >Максимальная цена:</p> <input class="input filter-input" type="text" name="price-min" placeholder="30000">
+      </fieldset>
       <fieldset class="filter-item filter-item-brands">
         <legend>Производители:</legend>
         <ul>
@@ -87,6 +102,7 @@
     </form>
     <form class="sorting" action="https://echo.htmlacademy.ru" method="GET">
       <fieldset class="sorting-item sorting-item-base">
+        <legend>Сортировка:</legend>
         <ul>
           <li class="sorting-option">
             <input id="sorting-price" class="input sorting-input" name="base" value="price" type="radio">
